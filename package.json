@@ -1,0 +1,29 @@
+{
+  "name": "wfcm-cy",
+  "version": "1.0.0",
+  "description": "wfcm scripts using cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:record": "npx cypress run --record --browser chrome --key 726eb451-3245-4f64-bb8d-d0263ab72517 --variable CYPRESS_USERNAME",
+    "cy:parallel": "npx cypress run --browser chrome --parallel --record --key 726eb451-3245-4f64-bb8d-d0263ab72517 --ci-build-id $(date +%s)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeberon/wfcm-cy.git"
+  },
+  "author": "Mike Beron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeberon/wfcm-cy/issues"
+  },
+  "homepage": "https://github.com/mikeberon/wfcm-cy#readme",
+  "dependencies": {
+    "@bahmutov/cy-api": "^2.2.6",
+    "cypress": "^13.7.0",
+    "ini": "^4.1.2"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "elements": {
+    "Location Dropdown": "//button[@data-id='userLocation']",
+    "Team Dropdown": "//button[@data-id='userTeam']",
+    "Position Dropdown": "//button[@data-id='userPosition']",
+    "Agent Dropdown": "//button[@data-id='activeAgentList']",
+    "Start Date": "//input[@id='startDate']",
+    "Date Selector": "//span[@title='Select a Date']",
+    "Clear Date": "//span[@title='Clear']",
+    "Go": "//button[@id='go']",
+    "Download": "//img[@alt='Download Icon']",
+    "User Config Table": "//div[@id='maindiv']",
+    "Save": "//button[@id='save']",
+    "Username Header": "(//span[@id='header-username'])[4]"
+  },
+
+  "update": {
+    "Agent Deselect All": "//button[normalize-space()='Deselect All']",
+    "Agent Search": "//div[@class='dropdown-menu show']//input[@aria-label='Search']",
+    "Agent Search Result": "//span[@class='text' and text()='${agent}']",
+    "Agent Location Arrow": "(//div[@class='htAutocompleteArrow'][contains(text(),'▼')])[2]",
+    "New Location": "//td[normalize-space()='${location}']"
+  },
+  "navbar": {
+    "Account Menu": "//li[@id='ucc-nav-account-menu']",
+    "Logout": "//div[@class='popover-body']//ul[@id='ucc-nav-account-menu-ul']",
+    "Yes": "//button[@id='confirm-ucc-logout-btn']"
+  },
+  
+  "wait": {
+    "default": 500
+  }
+}

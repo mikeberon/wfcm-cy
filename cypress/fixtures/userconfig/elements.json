@@ -1,0 +1,14 @@
+{
+  "Location Dropdown": "//button[@data-id='userLocation']",
+  "Team Dropdown": "//button[@data-id='userTeam']",
+  "Position Dropdown": "//button[@data-id='userPosition']",
+  "Agent Dropdown": "//button[@data-id='activeAgentList']",
+  "Start Date": "//input[@id='startDate']",
+  "Date Selector": "//span[@title='Select a Date']",
+  "Clear Date": "//span[@title='Clear']",
+  "Go": "//button[@id='go']",
+  "Download": "//img[@alt='Download Icon']",
+  "User Config Table": "//div[@id='maindiv']",
+  "Save": "//button[@id='save']",
+  "Username Header": "(//span[@id='header-username'])[4]"
+}
