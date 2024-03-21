@@ -11,6 +11,7 @@ module.exports = {
     parallel: true,
     record: false,
     watchForFileChanges: false,
+    headless: true,
 
     // Define custom tasks and node event listeners
     setupNodeEvents(on, config) {
