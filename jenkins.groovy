@@ -7,6 +7,13 @@ pipeline {
         timeout(time: 1, unit: 'HOURS')
     }
 
+    environment {
+        NODE_WORKSPACE = "/home/wonders/jenkins/workspace/Cypress-User-Configuration"
+        REPORTS_DIR_JENKINS = "/var/www/html/aut/Cypress-User-Configuration/report"
+        REPORT_URL = "http://52.20.228.188/aut/Cypress-User-Configuration/report/${BUILD_NUMBER}/report.html#totals"
+        LATEST_REPORT_DIR_JENKINS = "${REPORTS_DIR_JENKINS}/${BUILD_NUMBER}"
+    }
+
     stages {
         stage('Checkout') {
             steps {
