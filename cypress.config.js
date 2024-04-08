@@ -12,7 +12,18 @@ module.exports = {
     record: false,
     watchForFileChanges: false,
     headless: true,
-
+    reporter: "mochawesome", // Use mochawesome as the reporter
+    reporterOptions: {
+      reportDir: "cypress/reports/mocha", // Define where to save the reports
+      overwrite: false, // Do not overwrite reports
+      html: false, // Do not create HTML report
+      json: true, // Create JSON report
+    },
+    // reporter: "cypress-html-reporter",
+    // reporterOptions: {
+    //   output: "cypress/report/cypress-html-report",
+    //   openReportInBrowser: true
+    // },
     // Define custom tasks and node event listeners
     setupNodeEvents(on, config) {
       // Custom task to check if a file exists

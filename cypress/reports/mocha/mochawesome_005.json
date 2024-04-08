@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-03T07:11:09.842Z",
+    "end": "2024-04-03T07:12:21.284Z",
+    "duration": 71442,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5ee44e51-9ea4-429f-a7e5-f5e5658da2ff",
+      "title": "",
+      "fullFile": "cypress/e2e/userconfig/user-configuration.cy.js",
+      "file": "cypress/e2e/userconfig/user-configuration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e75c328b-95ff-4555-97b6-b36e93fdc978",
+          "title": "user-configuration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should ensure that all specified elements are visible",
+              "fullTitle": "user-configuration should ensure that all specified elements are visible",
+              "timedOut": null,
+              "duration": 12308,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check visibility using userconfig\ncy.checkVisibility();",
+              "err": {},
+              "uuid": "ed9f7b15-d0a7-4161-9bea-9b286e3251bf",
+              "parentUUID": "e75c328b-95ff-4555-97b6-b36e93fdc978",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should ensure that user is able to sort username column",
+              "fullTitle": "user-configuration should ensure that user is able to sort username column",
+              "timedOut": null,
+              "duration": 10943,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Ensure that the \"Username header\" element is visible\ncy.sortUsername();\ncy.log('Successfully sorted username column');",
+              "err": {},
+              "uuid": "c2408804-d5c3-400b-8d01-be7fbaf1dee4",
+              "parentUUID": "e75c328b-95ff-4555-97b6-b36e93fdc978",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should ensure that user is able to save changes",
+              "fullTitle": "user-configuration should ensure that user is able to save changes",
+              "timedOut": null,
+              "duration": 47448,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Search agent\ncy.searchAgent(agentName);\n// Update agent's location\ncy.updateAgentLocation(newLocation);\n// Revert agent's location\ncy.updateAgentLocation(defaultLocation);",
+              "err": {},
+              "uuid": "758cbae7-666b-4220-b0e3-c4ee45cc9110",
+              "parentUUID": "e75c328b-95ff-4555-97b6-b36e93fdc978",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed9f7b15-d0a7-4161-9bea-9b286e3251bf",
+            "c2408804-d5c3-400b-8d01-be7fbaf1dee4",
+            "758cbae7-666b-4220-b0e3-c4ee45cc9110"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 70699,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
