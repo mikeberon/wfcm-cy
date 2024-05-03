@@ -12,6 +12,7 @@ pipeline {
         CYPRESS_VERSION = '8.7.0' // Cypress version
         NODE_WORKSPACE = "/home/wonders/jenkins/workspace/cy-user-config"
         REPORTS_DIR = "${NODE_WORKSPACE}/cypress/reports/mocha"
+        CYPRESS_RUN_NUMBER = "${currentBuild.number}"
     }
 
     stages {
@@ -61,19 +62,24 @@ pipeline {
     post { 
         success {
             script {
-                sendEmail('PASSED', CYPRESS_RUN_NUMBER)
+                sendEmail('PASSED', currentBuild.number)
             }
         }
         
         failure {
             script {
-                sendEmail('FAILED', CYPRESS_RUN_NUMBER)
+                sendEmail('FAILED', currentBuild.number)
             }
         }
     }
 }
 
 def sendEmail(status, cypressRunNumber) {
+    if (!cypressRunNumber) {
+        println("Error: Missing cypressRunNumber")
+        return
+    }
+
     // Construct the Cypress Dashboard URL with the run number
     String dashboardUrl = "https://dashboard.cypress.io/projects/${env.CYPRESS_PROJECT_ID}/runs/${cypressRunNumber}"
 
