@@ -62,13 +62,13 @@ pipeline {
     post { 
         success {
             script {
-                sendEmail('PASSED', currentBuild.number)
+                sendEmail('PASSED', CYPRESS_RUN_NUMBER)
             }
         }
         
         failure {
             script {
-                sendEmail('FAILED', currentBuild.number)
+                sendEmail('FAILED', CYPRESS_RUN_NUMBER)
             }
         }
     }
